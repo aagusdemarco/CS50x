@@ -17,7 +17,7 @@ else if (x > y)
 {
     printf("x is greater then y\n");
 }
-else if (x == y)
+else
 {
     printf("x is equeal to y\n");
 }
