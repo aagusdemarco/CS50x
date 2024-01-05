@@ -13,7 +13,7 @@ int main(void)
     for(int i = 0; i < h; i++)
     {
 
-        for(int j = 1; j < h - 1; j++)
+        for(int j = 1; j < h - i; j++)
         {
             printf(" ");
         }
@@ -22,7 +22,7 @@ int main(void)
         {
             printf("#");
         }
-        
+
         printf("\n");
     }
 }
