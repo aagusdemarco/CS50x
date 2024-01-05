@@ -24,11 +24,12 @@ int main (void)
         }
 
         printf("  ");
-        printf("\n");
 
-        for (int l = 0; l < h - i; l++)
+        for (int l = 0; l < i + 1; l++)
         {
             printf("#");
         }
+
+        printf("\n");
     }
 }
