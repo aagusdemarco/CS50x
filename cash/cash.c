@@ -21,22 +21,22 @@ int main(void)
         if (c >= q)
         {
             c = c - q;
-            counter++;
+            counter += 1;
         }
-        else if (c >= d )
+        else if (c >= d && c < q)
         {
             c = c - d;
-            counter++;
+            counter += 1;
         }
-        else if (c >= n)
+        else if (c >= n && c < d)
         {
             c = c - n;
-            counter++;
+            counter += 1;
         }
-        else if (c >= p)
+        else if (c >= p && c < n)
         {
             c = c - p;
-            counter++;
+            counter += 1;
         }
         printf("%i", counter);
     }
