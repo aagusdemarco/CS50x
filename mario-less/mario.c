@@ -8,17 +8,17 @@ int main(void)
     {
         h = get_int("Height: ");
     }
-    while(h < 1);
+    while (h < 1);
 
-    for(int i = 0; i < h; i++)
+    for (int i = 0; i < h; i++)
     {
 
-        for(int j = 1; j < h - i; j++)
+        for (int j = 1; j < h - i; j++)
         {
             printf(" ");
         }
 
-        for(int k = 0; k < i + 1; k++)
+        for (int k = 0; k < i + 1; k++)
         {
             printf("#");
         }
