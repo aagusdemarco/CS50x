@@ -3,5 +3,10 @@
 
 int main(void)
 {
-    
+    int c;
+    do
+    {
+        c = get_int("Change owed: ");
+        
+    }
 }
