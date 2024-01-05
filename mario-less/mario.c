@@ -3,6 +3,9 @@
 
 int main(void)
 {
-    int n = get_int("Height: ");
-    for(int i = 0; )
+    int height = get_int("Height: ");
+    for(int i = 0; i < height; i++)
+    {
+        
+    }
 }
