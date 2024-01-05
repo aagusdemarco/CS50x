@@ -23,7 +23,7 @@ int main(void)
             c = c - q;
             counter++;
         }
-        else if (c >= d)
+        else if (c >= d )
         {
             c = c - d;
             counter++;
