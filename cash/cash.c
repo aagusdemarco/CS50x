@@ -15,4 +15,8 @@ int main(void)
     int n = 5;
     int p = 1;
 
+    for (int i = 0; i < c; i++)
+    {
+        
+    }
 }
