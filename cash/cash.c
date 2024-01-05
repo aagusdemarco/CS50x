@@ -38,6 +38,6 @@ int main(void)
             c = c - p;
             counter += 1;
         }
-        printf("%i", counter);
     }
+    printf("%i\n", counter);
 }
