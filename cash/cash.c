@@ -10,8 +10,9 @@ int main(void)
     }
     while (c < 1);
 
-    int quarter = 25;
-    int dime = 10;
-    int nickel = 5;
-    int penny
+    int q = 25;
+    int d = 10;
+    int n = 5;
+    int p = 1;
+
 }
