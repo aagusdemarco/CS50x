@@ -17,6 +17,10 @@ int main(void)
 
     for (int i = 0; i < c; i++)
     {
-        
+        if (c >= q)
+        {
+            c = c - q
+        }
+        else if (c)
     }
 }
