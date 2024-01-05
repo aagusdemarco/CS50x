@@ -19,8 +19,20 @@ int main(void)
     {
         if (c >= q)
         {
-            c = c - q
+            c = c - q;
         }
-        else if (c)
+        else if (c >= d)
+        {
+            c = c - d;
+        }
+        else if (c >= n)
+        {
+            c = c - n;
+        }
+        else if (c >= p)
+        {
+            c = c - p;
+        }
+        printf("%i", c);
     }
 }
