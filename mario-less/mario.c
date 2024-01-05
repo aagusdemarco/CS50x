@@ -3,10 +3,20 @@
 
 int main(void)
 {
-    int height = get_int("Height: ");
-
-    for(int i = 0; i < height; i++)
+    int h;
+    do
     {
-        
+        h = get_int("Height: ");
+    }
+    while(h < 1);
+
+    for(int i = 0; i < h; i++)
+    {
+        printf(" ");
+        for(int j = 0; j < h; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
     }
 }
