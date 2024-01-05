@@ -7,6 +7,7 @@ int main(void)
     do
     {
         c = get_int("Change owed: ");
-        
     }
+    while (c < 1);
+    
 }
