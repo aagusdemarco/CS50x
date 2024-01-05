@@ -14,25 +14,30 @@ int main(void)
     int d = 10;
     int n = 5;
     int p = 1;
+    int counter = 0;
 
-    for (int i = 0; i < c; i++)
+    while (c > 0)
     {
         if (c >= q)
         {
             c = c - q;
+            counter++;
         }
         else if (c >= d)
         {
             c = c - d;
+            counter++;
         }
         else if (c >= n)
         {
             c = c - n;
+            counter++;
         }
         else if (c >= p)
         {
             c = c - p;
+            counter++;
         }
-        printf("%i", c);
+        printf("%i", counter);
     }
 }
