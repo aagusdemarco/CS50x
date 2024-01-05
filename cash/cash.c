@@ -9,5 +9,6 @@ int main(void)
         c = get_int("Change owed: ");
     }
     while (c < 1);
+
     
 }
