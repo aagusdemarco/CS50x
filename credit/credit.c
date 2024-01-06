@@ -3,5 +3,7 @@
 
 int main(void)
 {
-    
+    long amex;
+    long visa;
+    long master;
 }
