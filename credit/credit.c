@@ -6,6 +6,7 @@ int main(void)
     long amex;
     long visa;
     long master;
+    int counter = 0;
 
     do
     {
@@ -13,5 +14,5 @@ int main(void)
     }
     while(card < 0);
 
-    for (int i = 0; i >)
+
 }
