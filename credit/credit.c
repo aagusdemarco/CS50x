@@ -10,6 +10,11 @@ int main(void)
     //13 o 16 digitos y 4...
     //16 digitos y 51..., 52..., 53..., 54..., 55...
     int counter = 0;
+    int sum1;
+    int sum2;
+    int mod1;
+    int mod2;
+    
 
     do
     {
@@ -27,6 +32,8 @@ int main(void)
     if (length != 13 && length != 15 && length != 16){
         printf("INVALID\n");
     }
+
+
 
 
 }
