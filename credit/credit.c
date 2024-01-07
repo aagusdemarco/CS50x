@@ -60,15 +60,15 @@ int main(void)
     }
     while (start > 100);
      // Next check starting digits for card type
-    if ((start / 10 == 5) && (0 < start % 10 && start % 10 < 6))
+    if (i == 16 && ((start / 10 == 5) && (0 < start % 10 && start % 10 < 6)))
     {
         printf("MASTERCARD\n");
     }
-    else if ((start / 10 == 3) && (start % 10 == 4 || start % 10 == 7))
+    else if (i == 15 ((start / 10 == 3) && (start % 10 == 4 || start % 10 == 7)))
     {
         printf("AMEX\n");
     }
-    else if (start / 10 == 4)
+    else if ((i == 13 || i == 15) && (start / 10 == 4))
     {
         printf("VISA\n");
     }
