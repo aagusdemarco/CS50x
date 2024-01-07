@@ -52,7 +52,12 @@ int main(void)
     while (card > 0);
 
     total = sum1 + sum2;
-    
+    if (total % 10 != 0)
+    {
+        printf("INVALID\n");
+    }
+
+    if
 
 
 }
