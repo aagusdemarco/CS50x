@@ -23,24 +23,7 @@ int main(void)
         length = length / 10;
         counter++;
     }
-    int shit = card / pow(10, (counter - 2));
-    printf("%i\n", shit);
-
-    if (counter == 15 && (card / pow(10, (counter - 2)) == 34 || card / pow(10, (counter - 2)) == 37))
-    {
-        printf("AMEX\n");
-    }
-    else if ((counter == 16 || counter == 13) && card / (10 * (counter - 2)) == 4)
-    {
-        printf("VISA\n");
-    }
-    else if (counter == 16 && (card / (10 * (counter - 2)) == 51 || card / (10 * (counter - 2)) == 52 || card / (10 * (counter - 2)) == 53 || card / (10 * (counter - 2)) == 54))
-    {
-        printf("MASTERCARD\n");
-    }
-    else
-    {
-        printf("INVALID\n");
-    }
+    int shit = card / pow(10, (counter - 2)); // formula para sacar los primeros digitos de la tarjeta
+    
 
 }
