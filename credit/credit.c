@@ -22,7 +22,8 @@ int main(void)
         length = length / 10;
         counter++;
     }
-    printf("%i\n", counter);
+    int shit = card / (10 * (counter - 2));
+    printf("%i\n", shit);
 
     if (counter == 15 && (card / (10 * (counter - 2)) == 34 || card / (10 * (counter - 2)) == 37))
     {
