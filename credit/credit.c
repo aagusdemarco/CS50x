@@ -64,7 +64,7 @@ int main(void)
     {
         printf("MASTERCARD\n");
     }
-    else if (i == 15 ((start / 10 == 3) && (start % 10 == 4 || start % 10 == 7)))
+    else if (i == 15 && ((start / 10 == 3) && (start % 10 == 4 || start % 10 == 7)))
     {
         printf("AMEX\n");
     }
