@@ -16,7 +16,8 @@ int main(void)
     }
     while (card < 0);
 
-    while (length > 0)
+    length = card;
+    while (length != 0)
     {
         length = length / 10;
         counter++;
