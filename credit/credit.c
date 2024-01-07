@@ -6,9 +6,6 @@ int main(void)
 {
     long card;
     long length;
-    //15 digitos y 34... o 37...
-    //13 o 16 digitos y 4...
-    //16 digitos y 51..., 52..., 53..., 54..., 55...
     int counter = 0;
     int sum1;
     int sum2;
@@ -17,6 +14,7 @@ int main(void)
     int dble1;
     int dble2;
     int total = 0;
+    long startnum;
 
     do
     {
@@ -57,10 +55,27 @@ int main(void)
         printf("INVALID\n");
     }
 
-    if ((counter == 15) && (card / pow(10, counter - 2) == 34 || card / pow(10, counter - 2) == 37))
+    startnum = card;
+    do
+    {
+        startnum = startnum / 10;
+    }
+    while (startnum > 100);
+
+    if ((counter == 16) && ((startnum / 10 == 5) && (0 < startnum % 10 && startnum % 10 < 6)))
+    {
+        printf("MASTERCARD\n");
+    }
+    else if ((counter == 15) && ((startnum / 10 == 3) && (startnum % 10 == 4 || startnum % 10 == 7)))
     {
         printf("AMEX\n");
     }
-    else if (counter == 16 && (card / pow(10, counter - 2) == 51 || card / pow(10, counter - 2) == 52))
-
+    else if ((counter == 16 || counter == 13) && (startnum / 10 == 4))
+    {
+        printf("VISA\n");
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
 }
