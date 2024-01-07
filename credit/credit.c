@@ -20,10 +20,8 @@ int main(void)
         card = card / 10;
         counter++;
     }
-    long shit = card / 10;
-    printf("%li\n", shit);
 
-    if (counter == 15 && (card / 10000000000000 == 34 || card / 10000000000000 == 37))
+    if (counter == 15 && (card / (counter - 2) == 34 || card / (counter - 2) == 37))
     {
         printf("AMEX\n");
     }
