@@ -4,9 +4,9 @@
 int main(void)
 {
     long card;
-    int amex; //15 digitos y 34... o 37...
-    int visa; //13 o 16 digitos y 4...
-    int master; //16 digitos y 51..., 52..., 53..., 54..., 55...
+    //15 digitos y 34... o 37...
+    //13 o 16 digitos y 4...
+    //16 digitos y 51..., 52..., 53..., 54..., 55...
     int counter = 0;
 
     do
@@ -19,5 +19,11 @@ int main(void)
     {
         card = card / 10;
         counter++;
+    }
+    printf("%i", card / 10000000000000);
+
+    if (counter == 15 && (card / 10000000000000 == 34 || card / 10000000000000 == 37))
+    {
+        printf("AMEX\n");
     }
 }
