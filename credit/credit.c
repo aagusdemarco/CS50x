@@ -31,6 +31,7 @@ int main(void)
 
     if (length != 13 && length != 15 && length != 16){
         printf("INVALID\n");
+        return 0;
     }
 
     do
@@ -53,6 +54,7 @@ int main(void)
     if (total % 10 != 0)
     {
         printf("INVALID\n");
+        return 0;
     }
 
     startnum = card;
@@ -62,7 +64,7 @@ int main(void)
     }
     while (startnum > 100);
 
-    if ((startnum / 10 == 5) && (0 < startnum % 10 && startnum % 10 < 6)))
+    if ((startnum / 10 == 5) && (0 < startnum % 10 && startnum % 10 < 6))
     {
         printf("MASTERCARD\n");
     }
