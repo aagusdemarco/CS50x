@@ -57,7 +57,7 @@ int main(void)
         printf("INVALID\n");
     }
 
-    if
+    if (length == 15 && ())
 
 
 }
