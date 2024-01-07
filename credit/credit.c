@@ -14,7 +14,9 @@ int main(void)
     int sum2;
     int mod1;
     int mod2;
-    
+    int dble1;
+    int dble2;
+    int total = 0;
 
     do
     {
@@ -33,7 +35,24 @@ int main(void)
         printf("INVALID\n");
     }
 
+    do
+    {
+        mod1 = card % 10;
+        card = card / 10;
+        sum1 = sum1 + mod1;
 
+        mod2 = card % 10;
+        card = card / 10;
+
+        mod2 = mod2 * 2;
+        dble1 = mod2 % 10;
+        dble2 = mod2 / 10;
+        sum2 = sum2 + dble1 + dble2;
+    }
+    while (card > 0);
+
+    total = sum1 + sum2;
+    
 
 
 }
