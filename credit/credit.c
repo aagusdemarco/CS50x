@@ -7,8 +7,8 @@ int main(void)
     long card;
     long length;
     int counter = 0;
-    int sum1;
-    int sum2;
+    int sum1 = 0;
+    int sum2 = 0;
     int mod1;
     int mod2;
     int dble1;
