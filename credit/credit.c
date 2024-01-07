@@ -21,8 +21,7 @@ int main(void)
         counter++;
     }
 
-    if (counter == 15 && (card / (counter - 2) == 34 || card / (counter - 2) == 37))
-    {
-        printf("AMEX\n");
-    }
+    printf("%i\n", counter);
+    int shit = card / 10;
+    printf("%i\n", shit);
 }
