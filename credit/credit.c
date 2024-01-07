@@ -20,7 +20,7 @@ int main(void)
         card = card / 10;
         counter++;
     }
-    printf("%i", card / 10000000000000);
+    printf("%li", card / 10000000000000);
 
     if (counter == 15 && (card / 10000000000000 == 34 || card / 10000000000000 == 37))
     {
