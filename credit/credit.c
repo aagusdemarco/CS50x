@@ -16,10 +16,28 @@ int main(void)
     }
     while (card < 0);
 
-    while (length != 0)
+    while (length > 0)
     {
         length = length / 10;
         counter++;
+    }
+    printf("%i\n", counter);
+
+    if (counter == 15 && (card / (counter - 2) == 34 || card / (counter - 2) == 37))
+    {
+        printf("AMEX\n");
+    }
+    else if ((counter == 16 || counter == 13) && card / (counter - 1) == 4)
+    {
+        printf("VISA\n");
+    }
+    else if (counter == 16 && (card / (counter - 2) == 51 || card / (counter - 2) == 52 || card / (counter - 2) == 53 || card / (counter - 2) == 54))
+    {
+        printf("MASTERCARD\n");
+    }
+    else
+    {
+        printf("INVALID\n");
     }
 
 }
