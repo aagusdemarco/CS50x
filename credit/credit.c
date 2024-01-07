@@ -20,8 +20,5 @@ int main(void)
         card = card / 10;
         counter++;
     }
-
-    printf("%i\n", counter);
-    int shit = card / 10;
-    printf("%i\n", shit);
+    
 }
