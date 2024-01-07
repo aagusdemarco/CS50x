@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <math.h>
 
 int main(void)
 {
@@ -23,7 +24,7 @@ int main(void)
         counter++;
     }
 
-    if (counter == 15 && (card / ) == 34 || card / (10 * (counter - 2)) == 37))
+    if (counter == 15 && (card / pow(10, (counter - 2)) == 34 || card / pow(10, (counter - 2)) == 37))
     {
         printf("AMEX\n");
     }
