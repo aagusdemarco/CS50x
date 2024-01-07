@@ -23,7 +23,10 @@ int main(void)
         length = length / 10;
         counter++;
     }
-    int shit = card / pow(10, (counter - 2)); // formula para sacar los primeros digitos de la tarjeta
-    
+
+    if (length != 13 && length != 15 && length != 16){
+        printf("INVALID\n");
+    }
+
 
 }
