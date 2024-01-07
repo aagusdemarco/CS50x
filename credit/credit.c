@@ -4,75 +4,71 @@
 
 int main(void)
 {
-    long card;
-    long length;
-    int counter = 0;
-    int sum1 = 0;
-    int sum2 = 0;
-    int mod1;
-    int mod2;
-    int dble1;
-    int dble2;
-    int total = 0;
-    long startnum;
-
-    do
+    // Get card number
+    long n = get_long("Number: ");
+    // Count length
+    int i = 0;
+    long cc = n;
+    while (cc > 0)
     {
-        card = get_long("Number: ");
+        cc = cc / 10;
+        i++;
     }
-    while (card < 0);
-
-    length = card;
-    while (length != 0)
+    // Check if length is valid
+    if (i != 13 && i != 15 && i != 16)
     {
-        length = length / 10;
-        counter++;
-    }
-
-    if (length != 13 && length != 15 && length != 16){
         printf("INVALID\n");
         return 0;
     }
-
+    // Calculate checksum
+    int sum1 = 0;
+    int sum2 = 0;
+    long x = n;
+    int total = 0;
+    int mod1;
+    int mod2;
+    int d1;
+    int d2;
     do
     {
-        mod1 = card % 10;
-        card = card / 10;
+        // Remove last digit and add to sum1
+        mod1 = x % 10;
+        x = x / 10;
         sum1 = sum1 + mod1;
-
-        mod2 = card % 10;
-        card = card / 10;
-
+        // Remove second last digit
+        mod2 = x % 10;
+        x = x / 10;
+        // Double second last digit and add digits to sum2
         mod2 = mod2 * 2;
-        dble1 = mod2 % 10;
-        dble2 = mod2 / 10;
-        sum2 = sum2 + dble1 + dble2;
+        d1 = mod2 % 10;
+        d2 = mod2 / 10;
+        sum2 = sum2 + d1 + d2;
     }
-    while (card > 0);
-
+    while (x > 0);
     total = sum1 + sum2;
+    // Next check Luhn Algorithm
     if (total % 10 != 0)
     {
         printf("INVALID\n");
         return 0;
     }
-
-    startnum = card;
+    // Get starting digits
+    long start = n;
     do
     {
-        startnum = startnum / 10;
+        start = start / 10;
     }
-    while (startnum > 100);
-
-    if ((startnum / 10 == 5) && (0 < startnum % 10 && startnum % 10 < 6))
+    while (start > 100);
+     // Next check starting digits for card type
+    if ((start / 10 == 5) && (0 < start % 10 && start % 10 < 6))
     {
         printf("MASTERCARD\n");
     }
-    else if ((startnum / 10 == 3) && (startnum % 10 == 4 || startnum % 10 == 7))
+    else if ((start / 10 == 3) && (start % 10 == 4 || start % 10 == 7))
     {
         printf("AMEX\n");
     }
-    else if (startnum / 10 == 4)
+    else if (start / 10 == 4)
     {
         printf("VISA\n");
     }
