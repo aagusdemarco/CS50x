@@ -24,15 +24,15 @@ int main(void)
     }
     printf("%i\n", counter);
 
-    if (counter == 15 && (card / (counter - 2) == 34 || card / (counter - 2) == 37))
+    if (counter == 15 && (card / (10 * (counter - 2)) == 34 || card / (10 * (counter - 2)) == 37))
     {
         printf("AMEX\n");
     }
-    else if ((counter == 16 || counter == 13) && card / (counter - 1) == 4)
+    else if ((counter == 16 || counter == 13) && card / (10 * (counter - 2)) == 4)
     {
         printf("VISA\n");
     }
-    else if (counter == 16 && (card / (counter - 2) == 51 || card / (counter - 2) == 52 || card / (counter - 2) == 53 || card / (counter - 2) == 54))
+    else if (counter == 16 && (card / (10 * (counter - 2)) == 51 || card / (10 * (counter - 2)) == 52 || card / (10 * (counter - 2)) == 53 || card / (10 * (counter - 2)) == 54))
     {
         printf("MASTERCARD\n");
     }
