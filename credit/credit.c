@@ -22,7 +22,7 @@ int main(void)
         length = length / 10;
         counter++;
     }
-    printf("%i\n%li\n", counter, card);
+    printf("%i\n", counter - 2);
     int shit = card / (10 * (counter - 2));
     printf("%i\n", shit);
 
