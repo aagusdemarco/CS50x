@@ -62,15 +62,15 @@ int main(void)
     }
     while (startnum > 100);
 
-    if ((counter == 16) && ((startnum / 10 == 5) && (0 < startnum % 10 && startnum % 10 < 6)))
+    if ((startnum / 10 == 5) && (0 < startnum % 10 && startnum % 10 < 6)))
     {
         printf("MASTERCARD\n");
     }
-    else if ((counter == 15) && ((startnum / 10 == 3) && (startnum % 10 == 4 || startnum % 10 == 7)))
+    else if ((startnum / 10 == 3) && (startnum % 10 == 4 || startnum % 10 == 7))
     {
         printf("AMEX\n");
     }
-    else if ((counter == 16 || counter == 13) && (startnum / 10 == 4))
+    else if (startnum / 10 == 4)
     {
         printf("VISA\n");
     }
