@@ -57,7 +57,7 @@ int main(void)
         printf("INVALID\n");
     }
 
-    if (counter == 15 && (card / pow(10, counter - 2) == 34 || card / pow(10, counter - 2) == 37))
+    if ((counter == 15) && (card / pow(10, counter - 2) == 34 || card / pow(10, counter - 2) == 37))
     {
         printf("AMEX\n");
     }
