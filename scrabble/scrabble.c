@@ -9,10 +9,15 @@ int main(void)
     string word1 = get_string("Player 1: ");
     string word2 = get_string("Player 2: ");
 
+    string upperword1 = convert_upper(word1);
+    string upperword2 = convert_upper(word2);
+
 
 }
 
+int
+
 int get_score(string word)
 {
-    
+
 }
