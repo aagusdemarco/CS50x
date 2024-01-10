@@ -15,9 +15,12 @@ int main(void)
 
 }
 
-int
+int convert_upper(string word)
+{
+    
+}
 
 int get_score(string word)
 {
-    
+
 }
