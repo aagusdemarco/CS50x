@@ -5,6 +5,7 @@
 
 string convert_upper(string word);
 int get_score(string upperword);
+void winner(int score1, int score2);
 
 int main(void)
 {
@@ -18,18 +19,7 @@ int main(void)
     int score1 = get_score(upperword1);
     int score2 = get_score(upperword2);
 
-    if (score1 > score2)
-    {
-        printf("Player 1 wins!\n");
-    }
-    else if (score1 < score2)
-    {
-        printf("Player 2 wins!\n");
-    }
-    else
-    {
-        printf("Tie!\n");
-    }
+    winner(score1, score2);
 }
 
 string convert_upper(string word)
@@ -51,5 +41,21 @@ int get_score(string upperword)
     {
         score = score + points[upperword[i] - 65];
         return score;
+    }
+}
+
+void winner(int score1; int score2)
+{
+    if (score1 > score2)
+    {
+        printf("Player 1 wins!\n");
+    }
+    else if (score1 < score2)
+    {
+        printf("Player 2 wins!\n");
+    }
+    else
+    {
+        printf("Tie!\n");
     }
 }
