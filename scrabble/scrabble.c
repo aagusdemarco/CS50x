@@ -38,11 +38,14 @@ int get_score(string upperword)
     int length = strlen(upperword);
     if (length == 0)
     {
-        return1
+        return 1;
     }
     for (int i = 0; i < length; i++)
     {
-        if (upperword[i] )
+        if (upperword[i] > 64 && upperword[i] < 91)
+        {
+            score = score + upperword[i];
+        }
     }
     return score;
 }
