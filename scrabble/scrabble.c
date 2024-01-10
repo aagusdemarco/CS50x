@@ -36,9 +36,13 @@ int get_score(string upperword)
 {
     int score = 0;
     int length = strlen(upperword);
+    if (length == 0)
+    {
+        return1
+    }
     for (int i = 0; i < length; i++)
     {
-        score = score + points[upperword[i] - 65];
+        if (upperword[i] )
     }
     return score;
 }
