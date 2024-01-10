@@ -19,5 +19,5 @@ int
 
 int get_score(string word)
 {
-
+    
 }
