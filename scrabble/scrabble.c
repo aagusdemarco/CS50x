@@ -32,7 +32,7 @@ int main(void)
     }
 }
 
-int convert_upper(string word)
+string convert_upper(string word)
 {
     int length = strlen(word);
     for (int i = 0; i < length; i++)
