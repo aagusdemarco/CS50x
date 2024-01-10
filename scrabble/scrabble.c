@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 
-int convert_upper(string word);
+string convert_upper(string word);
 int get_score(string upperword);
 
 int main(void)
@@ -12,8 +12,8 @@ int main(void)
     string word1 = get_string("Player 1: ");
     string word2 = get_string("Player 2: ");
 
-    int upperword1 = convert_upper(word1);
-    int upperword2 = convert_upper(word2);
+    string upperword1 = convert_upper(word1);
+    string upperword2 = convert_upper(word2);
 
     int score1 = get_score(upperword1);
     int score2 = get_score(upperword2);
