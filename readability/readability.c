@@ -5,5 +5,15 @@
 
 int main(void)
 {
+    string text = get_string("Text: ");
+}
+
+int get_letters(string text)
+{
+
+}
+
+int get_sentences(string text)
+{
     
 }
