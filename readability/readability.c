@@ -38,10 +38,9 @@ int main(void)
     words++;
 
     float L = (letters / (float) words) * 100;
-    float S = (sentences / (float)words) * 100;
+    float S = (sentences / (float) words) * 100;
     float fl_index = 0.0588 * L - 0.296 * S - 15.8;
     int index = round(fl_index);
-
 
     if (index >= 16)
     {
