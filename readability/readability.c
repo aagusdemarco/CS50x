@@ -7,7 +7,13 @@ int main(void)
 {
     string text = get_string("Text: ");
     int length = strlen(text);
+    int index = 0;
+    int words = 0;
+    int letters = 0;
 
-    
+    for (int i = 0; i < length; i++)
+    {
+
+    }
 }
 
