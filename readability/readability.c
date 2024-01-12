@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <math.h>
 
 int main(void)
 {
@@ -36,9 +37,10 @@ int main(void)
         words++;
     }
 
-    int L = (letters / words) * 100;
-    int S = (sentences / words) * 100;
-    int index = 0.0588 * L - 0.296 * S - 15.8;
+    float L = (letters / words) * 100;
+    float S = (sentences / words) * 100;
+    float fl_index = 0.0588 * L - 0.296 * S - 15.8;
+    int index = round(fl_index);
 
     if (index >= 16)
     {
