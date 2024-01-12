@@ -10,10 +10,10 @@ int main(void)
 
 int get_letters(string text)
 {
-
+    
 }
 
 int get_sentences(string text)
 {
-    
+
 }
