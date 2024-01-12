@@ -1,8 +1,8 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
-#include <string.h>
 #include <math.h>
+#include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
@@ -55,4 +55,3 @@ int main(void)
         printf("Grade %i\n", index);
     }
 }
-
