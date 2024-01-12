@@ -32,10 +32,10 @@ int main(void)
         {
             sentences++;
         }
-
-        // last word
-        words++;
     }
+
+    // last word
+    words++;
 
     float L = (letters / (float) words) * 100;
     float S = (sentences / (float)words) * 100;
