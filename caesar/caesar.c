@@ -35,14 +35,13 @@ int only_digits(string key)
     {
         if (isdigit(key[i]))
         {
-            return true;
+            return 0;
         }
         else
         {
-            return false;
+            return 1;
         }
     }
-    return 0;
 }
 
 string rotate(string text, int key)
