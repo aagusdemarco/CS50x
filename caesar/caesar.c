@@ -34,4 +34,8 @@ int only_digits(string key)
     return 0;
 }
 
+int rotate(char cc, int key)
+{
+    
+}
 
