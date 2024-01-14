@@ -1,19 +1,20 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int only_digits(string key);
 
 int main(int argc, string argv[])
 {
-    if (argc > 3 && argc < 2)
+    if (argc > 3 || argc < 2)
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    else if (only_digits(argv[1] == true))
+    else if (only_digits(argv[1]) == true)
     {
-        int only_digits(string key)
+        int k = atoi(argv[1]);
     }
 }
 
