@@ -1,5 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <stdlib.h>
+
+int only_digits(string key);
 
 int main(int argc, string argv[])
 {
@@ -8,9 +11,9 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    else
+    else if (only_digits(argv[1] == true))
     {
-        int k = argv[1];
+        int only_digits(string key)
     }
 }
 
@@ -20,7 +23,6 @@ int only_digits(string key)
     {
         if (key[i] > 47 && key[i] < 58)
         {
-            key = atoi
             return true;
         }
         else
