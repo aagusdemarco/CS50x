@@ -28,7 +28,7 @@ int only_digits(string key)
 {
     for(int i = 0; i < strlen(key); i++)
     {
-        if (key[i] > 47 && key[i] < 58)
+        if (key[i])
         {
             return true;
         }
@@ -42,6 +42,6 @@ int only_digits(string key)
 
 int rotate(char cc, int key)
 {
-    
+
 }
 
