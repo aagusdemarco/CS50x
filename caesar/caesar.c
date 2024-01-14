@@ -21,12 +21,11 @@ int main(int argc, string argv[])
     else
     {
         int k = atoi(argv[1]);
+        string plaintext = get_string("plaintext:  ");
+        string ciphertext = rotate(plaintext, k);
+        printf("ciphertext: %s\n", ciphertext);
         return 0;
     }
-
-    string plaintext = get_string("plaintext:  ");
-    string ciphertext = rotate(plaintext, k);
-    printf("ciphertext: %s\n", ciphertext);
 }
 
 int only_digits(string key)
@@ -42,7 +41,6 @@ int only_digits(string key)
             return false;
         }
     }
-    return 0;
 }
 
 int rotate(string text, int key)
