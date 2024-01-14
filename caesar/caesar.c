@@ -48,7 +48,7 @@ int only_digits(string key)
 
 string rotate(string text, int key)
 {
-    string cipher = text;
+    string cipher = "";
     for (int i = 0; i > strlen(text); i++)
     {
         if (isupper(text[i]))
@@ -63,6 +63,7 @@ string rotate(string text, int key)
         {
             cipher[i] = text[i];
         }
+        printf("%s\n", cipher);
     }
     return cipher;
 }
