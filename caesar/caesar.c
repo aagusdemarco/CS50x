@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 int only_digits(string key);
-int rotate(string text, int key);
+string rotate(string text, int key);
 
 int main(int argc, string argv[])
 {
@@ -41,9 +42,10 @@ int only_digits(string key)
             return false;
         }
     }
+    return 0;
 }
 
-int rotate(string text, int key)
+string rotate(string text, int key)
 {
     string cipher = text;
     for (int i = 0; i > strlen(text); i++)
@@ -58,7 +60,7 @@ int rotate(string text, int key)
         }
         else
         {
-            cipher[i] = text[i]
+            cipher[i] = text[i];
         }
     }
     return cipher;
