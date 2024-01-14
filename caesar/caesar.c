@@ -3,6 +3,6 @@
 
 int main(int argc, string argv[])
 {
-    int k = argv[1];
     
+
 }
