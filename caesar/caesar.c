@@ -31,6 +31,7 @@ int only_digits(string key)
             return false;
         }
     }
+    return 0;
 }
 
 
