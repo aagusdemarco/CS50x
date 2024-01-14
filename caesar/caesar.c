@@ -1,8 +1,8 @@
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
 
 int only_digits(string key);
 string rotate(string text, int key);
@@ -24,15 +24,15 @@ int main(int argc, string argv[])
     {
         k = atoi(argv[1]);
     }
-        string plaintext = get_string("plaintext:  ");
-        string ciphertext = rotate(plaintext, k);
-        printf("ciphertext: %s\n", ciphertext);
+    string plaintext = get_string("plaintext:  ");
+    string ciphertext = rotate(plaintext, k);
+    printf("ciphertext: %s\n", ciphertext);
 }
 
 int only_digits(string key)
 {
     bool verification = true;
-    for(int i = 0; i < strlen(key); i++)
+    for (int i = 0; i < strlen(key); i++)
     {
         if (isdigit(key[i]))
         {
@@ -62,4 +62,3 @@ string rotate(string text, int key)
     }
     return cipher;
 }
-
