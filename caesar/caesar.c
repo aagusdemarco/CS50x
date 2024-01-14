@@ -49,7 +49,7 @@ int only_digits(string key)
 string rotate(string text, int key)
 {
     string cipher = text;
-    for (int i = 0; i > strlen(text); i++)
+    for (int i = 0; i < strlen(text); i++)
     {
         if (isupper(text[i]))
         {
