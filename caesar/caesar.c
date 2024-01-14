@@ -12,9 +12,15 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    else if (only_digits(argv[1]) == true)
+    else if (only_digits(argv[1]) == false)
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
+    else
     {
         int k = atoi(argv[1]);
+        return 0;
     }
 }
 
