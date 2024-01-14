@@ -31,17 +31,19 @@ int main(int argc, string argv[])
 
 int only_digits(string key)
 {
+    bool verification = true;
     for(int i = 0; i < strlen(key); i++)
     {
         if (isdigit(key[i]))
         {
-            return 0;
+            verification = true;
         }
         else
         {
-            return 1;
+            verification = false;
         }
     }
+    return verification;
 }
 
 string rotate(string text, int key)
