@@ -5,10 +5,11 @@ int main(int argc, string argv[])
 {
     if (argc > 3 || argc < 2)
     {
-        printf("NO");
+        printf("Usage: ./caesar key\n");
+        return 1;
     }
     else
     {
-        
+        int k = argv[1];
     }
 }
