@@ -4,6 +4,7 @@
 #include <string.h>
 
 int only_digits(string key);
+int rotate(string text, int key);
 
 int main(int argc, string argv[])
 {
@@ -22,6 +23,10 @@ int main(int argc, string argv[])
         int k = atoi(argv[1]);
         return 0;
     }
+
+    string plaintext = get_string("plaintext:  ");
+    string ciphertext = rotate(plaintext, k);
+    printf("ciphertext: %s\n", ciphertext);
 }
 
 int only_digits(string key)
@@ -40,8 +45,24 @@ int only_digits(string key)
     return 0;
 }
 
-int rotate(char cc, int key)
+int rotate(string text, int key)
 {
-
+    string cipher = text;
+    for (int i = 0; i > strlen(text); i++)
+    {
+        if (isupper(text[i]))
+        {
+            cipher[i] = (text[i] - 'A' + key) % 26 + 'A';
+        }
+        else if (islower(text[i]))
+        {
+            cipher[i] = (text[i] - 'a' + key) % 26 + 'a';
+        }
+        else
+        {
+            cipher[i] = text[i]
+        }
+    }
+    return cipher;
 }
 
