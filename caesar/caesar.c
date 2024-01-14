@@ -13,3 +13,11 @@ int main(int argc, string argv[])
         int k = argv[1];
     }
 }
+
+int only_digits(string key)
+{
+    for(int i = 0; i < strlen(key); i++)
+    {
+        
+    }
+}
