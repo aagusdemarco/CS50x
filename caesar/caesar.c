@@ -19,5 +19,15 @@ int only_digits(string key)
     for(int i = 0; i < strlen(key); i++)
     {
         if (key[i] > 47 && key[i] < 58)
+        {
+            key = atoi
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
+
+
