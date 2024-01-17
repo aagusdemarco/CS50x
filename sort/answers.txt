@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: In the reversed lists it performed considerably worse than the others, presumably due to the amount of swaps it had to do to "bubble" the largest numbers to the end of the list.
+
+sort2 uses: merge sort
+
+How do you know?: It provided runtimes that had little variation from one another independently of the input size.
+
+sort3 uses: selection sort
+
+How do you know?: Its runtime was consistently slower as the dataset increased in size, regardless of the order of the numbers.
