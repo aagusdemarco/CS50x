@@ -159,7 +159,10 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // TODO
+    for (int x = 0; x < candidate_count; x++)
+    {
+        
+    }
     return false;
 }
 
