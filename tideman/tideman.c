@@ -133,14 +133,14 @@ void add_pairs(void)
             int strength = preferences[i][j] - preferences[j][i];
             if (strength > 0)
             {
-                pairs[pair_count].winner = preferences[i][j];
-                pairs[pair_count].loser = preferences[j][i];
+                pairs[pair_count].winner = i;
+                pairs[pair_count].loser = j;
                 pair_count++;
             }
             else if (strength < 0)
             {
-                pairs[pair_count].winner = preferences[j][i];
-                pairs[pair_count].loser = preferences[i][j];
+                pairs[pair_count].winner = j;
+                pairs[pair_count].loser = i;
                 pair_count++;
             }
         }
@@ -151,7 +151,7 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    // TODO
+    for (int i = 0; i < pair_count; )
     return;
 }
 
