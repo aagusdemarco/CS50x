@@ -153,7 +153,10 @@ void sort_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-        for (int j = i + 1; i < pair_count - 1;)
+        for (int j = i + 1; i < pair_count - 1; j++)
+        {
+            
+        }
     }
     return;
 }
