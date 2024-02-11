@@ -151,15 +151,22 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    for (int i = 0; i < pair_count - 1; i++)
+    int i, j, min_index;
+    for (i = 0; i < pair_count - 1; i++)
     {
-        int min_index = i;
+        min_index = i;
         for (j = i + 1; j < pair_count; j++)
         {
             if (pairs[j] < pairs[min_index])
             {
                 min_index = j;
             }
+        }
+        if (min_index != i)
+        {
+            int temp = pairs[i];
+            pairs[i] = pairs[min_index];
+            pairs[min_index] = temp;
         }
     }
     return;
