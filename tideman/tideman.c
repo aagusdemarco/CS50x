@@ -156,9 +156,19 @@ void sort_pairs(void)
     {
         int max_win = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner];
         int temp_max;
+        int max_index = i;
         for (int j = i + 1; j < pairs_count; j++)
         {
             int temp_max = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
+            if (max_win < temp_max)
+            {
+                max_win = temp_max;
+                max_index = j;
+            }
+        }
+        if (max_index != i)
+        {
+            
         }
     }
     return;
