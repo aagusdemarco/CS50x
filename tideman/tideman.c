@@ -155,15 +155,15 @@ void sort_pairs(void)
     int i, j, min_index;
     for (i = 0; i < pair_count - 1; i++)
     {
-        min_index = i;
+        max_index = i;
         for (j = i + 1; j < pair_count; j++)
         {
-            if (pairs[j].winner < pairs[min_index].winner)
+            if (pairs[j].winner > pairs[min_index].winner)
             {
-                min_index = j;
+                max_index = j;
             }
         }
-        if (min_index != i)
+        if (max_index != i)
         {
             int temp = pairs[i].winner;
             pairs[i].winner = pairs[min_index].winner;
