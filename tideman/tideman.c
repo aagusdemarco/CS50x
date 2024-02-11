@@ -163,7 +163,7 @@ void sort_pairs(void)
                 max = j;
             }
         }
-        if (max_index != i)
+        if (max != i)
         {
             int temp = pairs[i].winner;
             pairs[i].winner = pairs[max].winner;
