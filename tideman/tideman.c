@@ -195,7 +195,10 @@ void print_winner(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-        if
+        if (locked[pairs[i].winner][pairs[i].loser] == false)
+        {
+            
+        }
     }
     return;
 }
