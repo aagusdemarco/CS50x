@@ -221,9 +221,9 @@ bool cycle(int origin, int loser)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if (locked[loser][i])
+        if (locked[loser][i] == true)
         {
-            if(cycle(origin, i))
+            if(cycle(origin, i) == true)
             {
                 return true;
             }
