@@ -157,16 +157,16 @@ void sort_pairs(void)
         min_index = i;
         for (j = i + 1; j < pair_count; j++)
         {
-            if (pairs[j] < pairs[min_index])
+            if (pairs[j].winner < pairs[min_index].winner)
             {
                 min_index = j;
             }
         }
         if (min_index != i)
         {
-            int temp = pairs[i];
-            pairs[i] = pairs[min_index];
-            pairs[min_index] = temp;
+            int temp = pairs[i].winner;
+            pairs[i].winner = pairs[min_index].winner;
+            pairs[min_index].winner = temp;
         }
     }
     return;
