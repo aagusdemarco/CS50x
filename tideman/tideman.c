@@ -156,9 +156,9 @@ void sort_pairs(void)
         int min_index = i;
         for (j = i + 1; j < pair_count; j++)
         {
-            if (pairs[j] < pairs[i])
+            if (pairs[j] < pairs[min_index])
             {
-                
+                min_index = j;
             }
         }
     }
