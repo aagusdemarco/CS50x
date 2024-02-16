@@ -33,6 +33,8 @@ int convert(string input)
     }
 
     int last_index = length - 1;
-    char last = input[last_index] - '0';
-    
+    int last = input[last_index] - '0';
+    input[last_index] = 
+
+
 }
