@@ -32,5 +32,7 @@ int convert(string input)
         return 1;
     }
 
-    char
+    int last_index = length - 1;
+    char last = input[last_index] - '0';
+    
 }
