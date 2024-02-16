@@ -25,5 +25,10 @@ int main(void)
 
 int convert(string input)
 {
-    // TODO
+    int length = strlen(input);
+
+    if (length > 0)
+    {
+        
+    }
 }
