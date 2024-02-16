@@ -27,5 +27,10 @@ int convert(string input)
 {
     int length = strlen(input);
 
-    
+    if (length < 0)
+    {
+        return 1;
+    }
+
+    char
 }
