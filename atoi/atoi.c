@@ -25,16 +25,14 @@ int main(void)
 
 int convert(string input)
 {
-    int length = strlen(input);
-
-    if (length < 0)
+    if (input[0] == 0)
     {
-        return 1;
+        return 0;
     }
 
-    int last_index = length - 1;
+    int last_index = strlen(input) - 1;
     int last = input[last_index] - '0';
-    input[last_index] = 
+    input[last_index] = '\0';
 
-
+    return last + (10 * convert(input));
 }
