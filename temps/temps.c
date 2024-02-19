@@ -64,6 +64,12 @@ void sort_cities(void)
 {
     for (int i = 0; i < NUM_CITIES - 1; i++)
     {
-        
+        for (int j = 0; j < NUM_CITIES - i - 1; j++)
+        {
+            if (temps[j].temp > temps[j + 1].temp)
+            {
+                
+            }
+        }
     }
 }
