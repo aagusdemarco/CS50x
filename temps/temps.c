@@ -66,10 +66,13 @@ void sort_cities(void)
     {
         for (int j = 0; j < NUM_CITIES - i - 1; j++)
         {
-            if (temps[j].temp > temps[j + 1].temp)
+            if (temps[j].temp < temps[j + 1].temp)
             {
-                
+                int pivot = temps[j].temp;
+                temps[j].temp = temps[j + 1].temp;
+                temps[j + 1].temp = pivot;
             }
         }
     }
+    return;
 }
