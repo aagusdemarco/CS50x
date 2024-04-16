@@ -13,7 +13,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
              int avg_rgb = (image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3.0;
              avg_rgb = round(avg_rgb);
 
-             // Index the RGB values to each pixel of the image
+             // Update each pixel of the image
              image[i][j].rgbtRed = avg_rgb;
              image[i][j].rgbtGreen = avg_rgb;
              image[i][j].rgbtBlue = avg_rgb;
@@ -26,9 +26,41 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
-    int sepiaRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue
-    int sepiaGreen = .349 * originalRed + .686 * originalGreen + .168 * originalBlue
-    int sepiaBlue = .272 * originalRed + .534 * originalGreen + .131 * originalBlue
+    // Loop over all pixels
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            // Extract each pixel's original RGB value
+            int originalRed = image[i][j].rgbtRed;
+            int originalGreen = image[i][j].rgbtGreen;
+            int originalBlue = image[i][j].rgbtBlue;
+
+            // Calculate sepia RGB values
+            int sepiaRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue;
+            int sepiaGreen = .349 * originalRed + .686 * originalGreen + .168 * originalBlue;
+            int sepiaBlue = .272 * originalRed + .534 * originalGreen + .131 * originalBlue;
+
+            // Restrict sepia values to 255 MAX
+            if (sepiaRed > 255)
+            {
+                sepiaRed = 255;
+            }
+            if (sepiaGreen > 255)
+            {
+                sepiaGreen = 255;
+            }
+            if (sepiaBlue > 255)
+            {
+                sepiaBlue = 255;
+            }
+
+            // Update each pixel
+            image[i][j].rgbtRed = sepiaRed;
+            image[i][j].rgbtGreen = sepiaGreen;
+            image[i][j].rgbtBlue = sepiaBlue;
+        }
+    }
     return;
 }
 
