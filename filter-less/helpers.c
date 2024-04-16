@@ -7,7 +7,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width ; j++)
         {
-             int avg_rgb = image[i][j]
+             int avg_rgb = image[i][j].rgbtRed +
         }
     }
     return;
