@@ -70,11 +70,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     // Loop over all pixels
     for (int i = 0; i < height; i++)
     {
+        // Loop over half the width so values don't return to normal value after initial swapping
         for (int j = 0; j < width / 2; j++)
         {
+            // Swap the pixels
             RGBTRIPLE buffer = image[i][j];
             image[i][j] = image[i][width - j - i];
-            
+            image[i][width - j - i] = buffer;
         }
     }
     return;
