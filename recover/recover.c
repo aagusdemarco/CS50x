@@ -30,7 +30,27 @@ int main(int argc, char *argv[])
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            if ()
+            foundjpeg = 1;
+        }
+
+        if (foundjpeg == 1)
+        {
+            // Determine if the image found is the first one
+            if (counter != 0)
+            {
+                fclose(image);
+            }
+
+            sprintf(filename, "%03i.jpg", counter);
+            image = fopen(filename, "w");
+            fwrite(buffer, 1, 512, image);
+            foundjpeg = 0;
+            counter++;
+        }
+        else if (counter != 0)
+        {
+            fwrite(buffer, 1, 512, image);
         }
     }
+    fclose(card);
 }
