@@ -3,6 +3,15 @@
 
 int main(int argc, char *argv[])
 {
- // Loop over the contents of the memory
- while()
+    // Verify correct usage
+    if (argc != 2)
+    {
+        return 1;
+    }
+
+    // Open memory card
+    FILE *card = fopen(argv[1], "r");
+
+    // Loop through the memory card
+    while(fread())
 }
