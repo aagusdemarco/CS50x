@@ -37,9 +37,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int originalBlue = image[i][j].rgbtBlue;
 
             // Calculate sepia RGB values
-            int sepiaRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue;
-            int sepiaGreen = .349 * originalRed + .686 * originalGreen + .168 * originalBlue;
-            int sepiaBlue = .272 * originalRed + .534 * originalGreen + .131 * originalBlue;
+            float sepiaRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue;
+            float sepiaGreen = .349 * originalRed + .686 * originalGreen + .168 * originalBlue;
+            float sepiaBlue = .272 * originalRed + .534 * originalGreen + .131 * originalBlue;
 
             // Restrict sepia values to 255 MAX
             if (sepiaRed > 255)
@@ -92,7 +92,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             copy[i][j] = image[i][j];
             float red = 0, green = 0, blue = 0, pixels = 0;
-            
+
         }
     }
     return;
