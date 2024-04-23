@@ -26,10 +26,11 @@ int main(int argc, char *argv[])
     FILE *image = NULL;
 
     // Loop through the memory card
-    while(fread(buffer, 1, 512, card))
+    while (fread(buffer, 1, 512, card))
     {
         // Determine if a new jpeg is found
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
+            (buffer[3] & 0xf0) == 0xe0)
         {
             foundjpeg = 1;
         }
@@ -54,6 +55,8 @@ int main(int argc, char *argv[])
             fwrite(buffer, 1, 512, image);
         }
     }
+
+    // Close the opened files
     fclose(image);
     fclose(card);
 }
