@@ -7,17 +7,17 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     // Loop over all pixels (2-dimensional matrix)
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width ; j++)
+        for (int j = 0; j < width; j++)
         {
             // Average of RGB values in all pixels
-             float avg_rgb = (image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3.0;
-             avg_rgb = round(avg_rgb);
+            float avg_rgb =
+                (image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3.0;
+            avg_rgb = round(avg_rgb);
 
-             // Update each pixel of the image
-             image[i][j].rgbtRed = avg_rgb;
-             image[i][j].rgbtGreen = avg_rgb;
-             image[i][j].rgbtBlue = avg_rgb;
-
+            // Update each pixel of the image
+            image[i][j].rgbtRed = avg_rgb;
+            image[i][j].rgbtGreen = avg_rgb;
+            image[i][j].rgbtBlue = avg_rgb;
         }
     }
     return;
@@ -114,9 +114,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-            image[i][j].rgbtRed = round((red/counter));
-            image[i][j].rgbtGreen = round((green/counter));
-            image[i][j].rgbtBlue = round((blue/counter));
+            image[i][j].rgbtRed = round((red / counter));
+            image[i][j].rgbtGreen = round((green / counter));
+            image[i][j].rgbtBlue = round((blue / counter));
         }
     }
     return;
