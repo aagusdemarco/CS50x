@@ -17,10 +17,13 @@ int main(int argc, char *argv[])
     // Create a buffer of 512 bytes for storing the jpegs
     uint8_t buffer[512];
 
+    // Declare variables for status of search and counter
     int foundjpeg = 0;
     int counter = 0;
+
+    // Declare variables for images found and its name
     char filename[8];
-    FILE *image;
+    FILE *image = NULL;
 
     // Loop through the memory card
     while(fread(buffer, 1, 512, card))
