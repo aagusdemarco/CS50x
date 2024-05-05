@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 
 #include "dictionary.h"
 
@@ -68,7 +69,7 @@ bool load(const char *dictionary)
 
     // Copy each word from the file to the hash table
     char buffer[45];
-    while (fscanf(dictf, "%s", buffer))
+    while (fscanf(dictf, "%s", buffer) != EOF)
     {
         node *new_word = malloc(sizeof(node));
         int hash_value = hash(buffer);
@@ -77,6 +78,7 @@ bool load(const char *dictionary)
         table[hash_value] = new_word;
         word_amount++;
     }
+    fclose(dictf);
     return true;
 }
 
