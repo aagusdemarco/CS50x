@@ -26,7 +26,22 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    
+    // Initialize the table and a cursor that points towards each element of the list
+    int hash_value = hash(word);
+    node *cursor = table[hash_value];
+
+    // Loop through all of the words and check if they exist
+    while (cursor != NULL)
+    {
+        if (strcasecmp(cursor->word, word) == 0)
+        {
+            return true;
+        }
+        else
+        {
+            cursor = cursor->next;
+        }
+    }
     return false;
 }
 
@@ -54,10 +69,10 @@ bool load(const char *dictionary)
     while (fscanf(dictf, "%s", buffer))
     {
         node *new_word = malloc(sizeof(node));
-        int hash_word = hash(buffer);
+        int hash_value = hash(buffer);
         strcpy(new_word->word, buffer);
-        new_word->next = table[hash_word];
-        table[hash_word] = new_word;
+        new_word->next = table[hash_value];
+        table[hash_value] = new_word;
         word_amount++;
     }
     return true;
@@ -74,5 +89,14 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    for (int i = 0; i < N; i++)
+    {
+        node *tmp = table[i];
+        node *cursor = table[i];
+        while (cursor != NULL)
+        {
+
+        }
+    }
     return false;
 }
