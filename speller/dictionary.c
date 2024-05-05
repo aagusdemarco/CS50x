@@ -13,6 +13,9 @@ typedef struct node
     struct node *next;
 } node;
 
+// Counter of Words in the file
+int word_amount = 0;
+
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
 
@@ -23,6 +26,7 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    
     return false;
 }
 
@@ -30,6 +34,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
+    // Good enough
     return toupper(word[0]) - 'A';
 }
 
@@ -53,6 +58,7 @@ bool load(const char *dictionary)
         strcpy(new_word->word, buffer);
         new_word->next = table[hash_word];
         table[hash_word] = new_word;
+        word_amount++;
     }
     return true;
 }
@@ -61,8 +67,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    
-    return 0;
+    return word_amount;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
