@@ -3,6 +3,8 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 #include "dictionary.h"
 
@@ -89,14 +91,19 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    // Loop through the list
     for (int i = 0; i < N; i++)
     {
+        // Declare two pointers for each element of the list
         node *tmp = table[i];
         node *cursor = table[i];
+
+        // Loop through, freeing the element and following to the next word
         while (cursor != NULL)
         {
-
+            cursor = cursor->next;
+            free(tmp);
         }
     }
-    return false;
+    return true;
 }
