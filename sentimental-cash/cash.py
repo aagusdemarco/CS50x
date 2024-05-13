@@ -8,6 +8,7 @@ while True:
     else:
         print('Invalid input. ')
 
+c = round(c * 100)
 q = 25
 d = 10
 n = 5
@@ -28,5 +29,3 @@ while c > 0:
         c = c - p
         counter += 1
 print(counter)
-
-
