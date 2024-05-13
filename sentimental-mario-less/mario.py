@@ -13,5 +13,5 @@ while(True):
                 print(' ')
             for k in range(i + 1):
                 print('#')
-            print('\n')
+            print()
 
