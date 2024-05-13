@@ -1,7 +1,7 @@
 while True:
     h = int(input('Height: '))
 
-    if h >= 1:
+    if h >= 1 and h <= 8:
           break
     else:
           print('Invalid input' )
