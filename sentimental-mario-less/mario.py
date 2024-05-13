@@ -1,7 +1,7 @@
 while(True):
     h = int(input('Height: '))
 
-    if h < 1 or h !=:
+    if h < 1 or type(h) != int or h = '':
         print('Invalid Input. Please enter a positive integer. ')
     else:
         break
