@@ -1,12 +1,10 @@
-while(True):
+while True:
     h = int(input('Height: '))
 
-    if h < 1:
-        print('Invalid Input. Please enter a positive integer. ')
-    elif type(h) != int:
-        print('Invalid Input. Please enter a positive integer. ')
+    if h >= 1:
+          break
     else:
-        break
+          print('Invalid input' )
 
  for i in range(h):
         for j in range(h - i - 1):
