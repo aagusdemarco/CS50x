@@ -8,8 +8,8 @@ while True:
 
 for i in range(h):
     for j in range(h - i - 1):
-         print(' ')
+         print(' ', end='')
     for k in range(i + 1):
-         print('#')
+         print('#', end='')
     print()
 
