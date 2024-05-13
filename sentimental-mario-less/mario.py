@@ -1,3 +1,4 @@
 h = int(input('Height: '))
 
-for 
+for i in range(h):
+    
