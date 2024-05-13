@@ -22,6 +22,9 @@ while c > 0:
         c = c - d
         counter += 1
     elif c >= n and c < d:
+        c = c - n
+        counter += 1
+    elif c >= p and c < n:
         c = c - p
         counter += 1
 print(counter)
