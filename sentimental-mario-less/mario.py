@@ -8,10 +8,7 @@ while(True):
     else:
         break
 
- for i < h:
-            for j in range(h - i):
-                print(' ')
-            for k in range(i + 1):
-                print('#')
-            print()
+ for i in range(h):
+        print()
+        print()
 
