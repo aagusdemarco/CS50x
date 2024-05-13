@@ -1,4 +1,5 @@
 import cs50
+c = 0
 while True:
     c = cs50.get_float('Change owed: ')
 
