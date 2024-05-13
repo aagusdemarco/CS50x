@@ -1,5 +1,6 @@
+import cs50
 while True:
-    h = int(input('Height: '))
+    h = cs50.get_int('Height: ')
 
     if h >= 1 and h <= 8:
           break
