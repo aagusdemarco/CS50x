@@ -9,6 +9,9 @@ while(True):
         break
 
  for i in range(h):
-        print()
+        for j in range(h - i - 1):
+             print(' ')
+        for k in range(i + 1):
+             print('#')
         print()
 
