@@ -8,13 +8,11 @@ sentences = 0
 
 for letter in text:
 
-    if letter.isalpha() != 0:
+    if letter.isalpha():
         letters += 1
-
-    if letter == ' ':
+    elif letter.isspace():
         words += 1
-
-    if letter == '.' or c == '?' or c == '!':
+    elif letter == '.' or c == '?' or c == '!':
         sentences += 1
 
 L = (letters / float(words)) * 100
