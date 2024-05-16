@@ -1,5 +1,4 @@
 import cs50
-import txt
 
 text = cs50.get_string('Text: ')
 length = len(text)
@@ -9,7 +8,7 @@ sentences = 0
 
 for letter in text:
 
-    if txt.isalnum(letter) != 0:
+    if letter.isalpha() != 0:
         letters += 1
 
     if letter == ' ':
