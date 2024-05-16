@@ -1,13 +1,11 @@
 import cs50
 
 text = cs50.get_string('Text: ')
-length = len(text)
 letters = 0
 words = 1
 sentences = 0
 
 for letter in text:
-
     if letter.isalpha():
         letters += 1
     elif letter.isspace():
@@ -22,8 +20,8 @@ index = round(index)
 
 if index >= 16:
     print('Grade 16+')
-elif index < 1:
-    print('Before Grade 1')
-else:
+elif index > 1 and index < 16:
     print(f'Grade {index}')
+else:
+    print('Before Grade 1')
 
