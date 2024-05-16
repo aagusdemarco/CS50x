@@ -3,7 +3,7 @@ import cs50
 text = cs50.get_string('Text: ')
 length = len(text)
 letters = 0
-words = 0
+words = 1
 sentences = 0
 
 for letter in text:
@@ -16,8 +16,6 @@ for letter in text:
 
     if letter == '.' or c == '?' or c == '!':
         sentences += 1
-
-words += 1
 
 L = (letters / float(words)) * 100
 S = (sentences / float(words)) * 100
