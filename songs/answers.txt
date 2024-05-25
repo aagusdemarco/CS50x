@@ -2,4 +2,4 @@ Firstly, to characterize the listener's aura, you would have to calculate the av
 Then, you could choose an arbitrary set of parameters representing each 'mood' that will map to
 the extracted values and determine the listener's aura.
 
-
+This method, nevertheless 
