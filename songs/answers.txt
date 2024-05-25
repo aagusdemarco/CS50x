@@ -2,6 +2,6 @@ Firstly, to characterize the listener's aura, you would have to calculate the av
 Then, you could choose an arbitrary set of parameters representing each 'mood' that will map to
 the extracted values and determine the listener's aura.
 
-Even though, this method isn't quite good at representing people's feelings: listen to different music
-for different contexts, like working out or relaxing, which isn't captured in simple averages.Additionally,
-focusing only on the top 100 songs might miss other important aspects of their musical taste.
+Even though, this method isn't quite good at representing people's feelings: people may listen to different
+music for different contexts, like working out or relaxing, which isn't captured in simple averages.
+Additionally, focusing only on the top 100 songs might miss other important aspects of their musical taste.
