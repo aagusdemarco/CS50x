@@ -30,3 +30,5 @@ AND duration < 60;
 SELECT * FROM flights
 WHERE day = 29 AND month = 7 AND year = 2023
 ORDER BY hour, minute ASC LIMIT 1;
+
+
