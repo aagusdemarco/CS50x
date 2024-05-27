@@ -13,3 +13,9 @@ AND day = 28 AND month = 7 AND year = 2023;
 -- First, check for cars leaving the bakery parking lot
 SELECT * FROM bakery_security_logs
 WHERE day = 28 AND month = 7 AND year = 2023
+AND hour = 10 AND minute BETWEEN 15 AND 25;
+
+-- Then, check for ATM withdrawals that ocurred the day of the theft
+SELECT * FROM atm_transactions
+WHERE day = 28 AND month = 7 AND year = 2023
+AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw';
