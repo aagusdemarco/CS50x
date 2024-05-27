@@ -19,3 +19,11 @@ AND hour = 10 AND minute BETWEEN 15 AND 25;
 SELECT * FROM atm_transactions
 WHERE day = 28 AND month = 7 AND year = 2023
 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw';
+
+-- Lastly, check for the two clues mentioned by the last witness
+-- Check for calls which duration is less than a minute
+SELECT * FROM phone_calls
+WHERE day = 28 AND month = 7 AND year = 2023
+AND duration < 60;
+
+-- Check for 
