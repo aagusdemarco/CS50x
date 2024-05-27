@@ -60,3 +60,17 @@ AND people.passport_number IN (
         SELECT id FROM flights WHERE year = 2023 AND month = 7 AND day = 29
         ORDER BY hour, minute ASC LIMIT 1));
 
+-- Knowing that the thief is Bruce, we can proceed to investigate where did he escaped
+SELECT city FROM airports WHERE id = 4;
+
+-- Lastly, check for the accomplice's identity
+SELECT name FROM people
+WHERE phone_number IN (
+    SELECT receiver FROM phone_calls WHERE
+    day = 28 AND month = 7 AND year = 2023
+    AND caller = (
+        SELECT phone_number FROM people
+        WHERE name = 'Bruce'
+    )
+    AND duration > 60
+);
