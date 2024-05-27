@@ -43,20 +43,20 @@ WHERE people.license_plate IN (
 AND people.id IN (
     SELECT person_id FROM bank_accounts
     JOIN atm_transactions ON atm_transactions.account_number = bank_accounts.account_number
-    WHERE atm_transactions.year = 2020 AND atm_transactions.month = 7 AND atm_transactions.day = 28
+    WHERE atm_transactions.year = 2023 AND atm_transactions.month = 7 AND atm_transactions.day = 28
     AND transaction_type = 'withdraw'
     AND atm_transactions.atm_location = 'Leggett Street')
 
 -- Phone call from thief to accomplice
 AND people.phone_number IN (
     SELECT caller FROM phone_calls
-    WHERE year = 2020 AND month = 7 AND day = 28
+    WHERE year = 2023 AND month = 7 AND day = 28
     AND duration < 60)
 
 -- Passport Number
 AND people.passport_number IN (
     SELECT passport_number FROM passengers
     WHERE flight_id IN (
-        SELECT id FROM flights WHERE year = 2020 AND month = 7 AND day = 29
+        SELECT id FROM flights WHERE year = 2023 AND month = 7 AND day = 29
         ORDER BY hour, minute ASC LIMIT 1));
 
