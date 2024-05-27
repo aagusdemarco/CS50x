@@ -32,4 +32,31 @@ WHERE day = 29 AND month = 7 AND year = 2023
 ORDER BY hour, minute ASC LIMIT 1;
 
 -- Join all queries into a mega-query that will throw out the name of the thief
+SELECT name FROM people
+
+-- Cars leaving the bakery parking lot
+WHERE people.license_plate IN (
+    SELECT license_plate FROM bakery_security_logs
+    WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15 AND 25)
+
+-- 
+AND people.id IN (
+    SELECT person_id FROM bank_accounts
+    JOIN atm_transactions ON atm_transactions.account_number = bank_accounts.account_number
+    WHERE atm_transactions.year = 2020 AND atm_transactions.month = 7 AND atm_transactions.day = 28
+    AND transaction_type = “withdraw”
+    AND atm_transactions.atm_location = “Fifer Street”)
+
+-- Query phone calls table for phone number
+AND people.phone_number IN (
+    SELECT caller FROM phone_calls
+    WHERE year = 2020 AND month = 7 AND day = 28
+    AND duration < 60)
+
+-- Query flights and passengers tables for passport number
+AND people.passport_number IN (
+    SELECT passport_number FROM passengers
+    WHERE flight_id IN (
+        SELECT id FROM flights WHERE year = 2020 AND month = 7 AND day = 29
+        ORDER BY hour, minute ASC LIMIT 1));
 
