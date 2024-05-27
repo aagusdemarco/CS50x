@@ -31,4 +31,5 @@ SELECT * FROM flights
 WHERE day = 29 AND month = 7 AND year = 2023
 ORDER BY hour, minute ASC LIMIT 1;
 
+-- Join all queries into a mega-query that will throw out the name of the thief
 
