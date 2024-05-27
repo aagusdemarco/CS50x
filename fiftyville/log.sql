@@ -72,5 +72,5 @@ WHERE phone_number IN (
         SELECT phone_number FROM people
         WHERE name = 'Bruce'
     )
-    AND duration > 60
+    AND duration < 60
 );
