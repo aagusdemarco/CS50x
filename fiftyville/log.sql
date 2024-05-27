@@ -9,4 +9,7 @@ SELECT * FROM interviews
 WHERE transcript LIKE '%bakery%'
 AND day = 28 AND month = 7 AND year = 2023;
 
-
+-- Based on the interviews, we can investigate each of the events mentioned by them
+-- First, check for cars leaving the bakery parking lot
+SELECT * FROM bakery_security_logs
+WHERE day = 28 AND month = 7 AND year = 2023
