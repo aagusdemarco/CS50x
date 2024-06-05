@@ -7,6 +7,23 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function(){
+                // Correct Answer Part 1
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function(){
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innerHTML = 'Correct';
+                });
+
+                // Incorrect Answer Part 1
+                let incorrect = document.querySelector('.incorrect');
+                for (let i = 0, i < incorrect.length; i++){
+                    incorrect[i].addEventListener('click', function(){
+                        incorrect[i].style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Wrong';
+                }
+                });
+            })
         </script>
     </head>
     <body>
@@ -20,10 +37,12 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>Which one is the biggest argentine football club?</h3>
-                <button>River Plate</button>
-                <button>Boca Juniors</button>
-                <button>Independiente</button>
-                <button>Racing</button>
+                <button class="correct">River Plate</button>
+                <button class="incorrect">Boca Juniors</button>
+                <button class="incorrect">Independiente</button>
+                <button class="incorrect">Racing</button>
+
+                <p id="feedback1"></p>
 
             </div>
 
@@ -33,7 +52,10 @@
                 <!-- TODO: Add free response question here -->
                 <h3>Where did the Copa Libertadores 2018 final took place?</h3>
                 <input type="text">
-                <button>Submit</button>
+                <button id="check">Check Answer</button>
+
+                <p id="feedback2"></p>
+
             </div>
         </div>
     </body>
