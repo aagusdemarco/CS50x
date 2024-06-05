@@ -17,7 +17,7 @@
 
                 // Incorrect Answer Part 1
                 let incorrect = document.querySelector('.incorrect');
-                for (let i = 0, i < incorrect.length; i++){
+                for (let i = 0; i < incorrect.length; i++){
                     incorrect[i].addEventListener('click', function(){
                         incorrect[i].style.backgroundColor = 'red';
                         document.querySelector('#feedback1').innerHTML = 'Wrong';
