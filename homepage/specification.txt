@@ -10,11 +10,19 @@ HTML Tags Used:
 9. <button>
 10. <label>
 
-CSS Selectors and Properties Used:
-1. body - font-family
-2. h1 - color
-3. .navbar-brand - font-weight
-4. .content-container - margin-top
+CSS Selectors Used:
+1. body
+2. h1
+3. .navbar-brand
+4. .content-container
+5.
+
+CSS Properties Used:
+1. font-family
+2. color
+3. font-weight
+4. margin-top
+5. 
 
 JavaScript: Added an alert to the h1 click event on the main page and to the contact form submission.
 Bootstrap: Used for overall site styling, navigation bar, and forms.
