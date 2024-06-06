@@ -1,0 +1,20 @@
+HTML Tags Used:
+1. <meta>
+2. <nav>
+3. <a>
+4. <ul>
+5. <li>
+6. <form>
+7. <input>
+8. <textarea>
+9. <button>
+10. <label>
+
+CSS Selectors and Properties Used:
+1. body - font-family
+2. h1 - color
+3. .navbar-brand - font-weight
+4. .content-container - margin-top
+
+JavaScript: Added an alert to the h1 click event on the main page and to the contact form submission.
+Bootstrap: Used for overall site styling, navigation bar, and forms.
