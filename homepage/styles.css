@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #007bff;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.content-container {
+    margin-top: 3rem;
+}
