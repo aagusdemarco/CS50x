@@ -8,6 +8,26 @@
         <title>Soda Stereo - Home</title>
     </head>
     <body>
-        hello, homepage
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">SodaStereo</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="biography.html">Biography</a></li>
+                    <li class="nav-item"><a class="nav-link" href="discography.html">Discography</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="content-container mt-5">
+            <h1>Welcome to Soda Stereo's Official Page</h1>
+            <p>Explore the history, music, and legacy of one of the most influential rock bands in Latin America.</p>
+        </div>
+
+        <script>
+            document.querySelector('h1').addEventListener('click', function() {
+                alert('Welcome to the official Soda Stereo page!');
+            });
+        </script>
     </body>
 </html>
