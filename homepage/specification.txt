@@ -15,14 +15,14 @@ CSS Selectors Used:
 2. h1
 3. .navbar-brand
 4. .content-container
-5.
+5. .nav-link
 
 CSS Properties Used:
 1. font-family
 2. color
 3. font-weight
 4. margin-top
-5. 
+5. font-size
 
 JavaScript: Added an alert to the h1 click event on the main page and to the contact form submission.
 Bootstrap: Used for overall site styling, navigation bar, and forms.

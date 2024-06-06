@@ -13,3 +13,7 @@ h1 {
 .content-container {
     margin-top: 3rem;
 }
+
+.nav-link {
+    font-size: 18px;
+}
