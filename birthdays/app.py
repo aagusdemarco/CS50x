@@ -29,8 +29,28 @@ def index():
         # TODO: Add the user's entry into the database
         # Store user input at index.html as variables
         name = request.form.get("name")
+        if not name:
+            return redirect("/")
+
         month = request.form.get("month")
+        if not month:
+            return redirect("/")
+        try:
+            month = int(month)
+        except ValueError:
+            return redirect("/")
+        if month < 1 or month > 12:
+            return redirect("/")
+
         day = request.form.get("day")
+        if not day:
+            return redirect("/")
+        try:
+            day = int(day)
+        except ValueError:
+            return redirect("/")
+        if day < 1 or day > 31:
+            return redirect("/")
 
         # Store those values into the database
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", name, month, day)
@@ -40,7 +60,7 @@ def index():
     else:
 
         # TODO: Display the entries in the database on index.html
-
-        return render_template("index.html")
+        birthdays = db.execute("SELECT * FROM birthdays")
+        return render_template("index.html", birthdays=birthdays)
 
 
