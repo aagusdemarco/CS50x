@@ -217,21 +217,23 @@ def sell():
         else:
             shares = int(shares)
 
-    for stock in stocks:
-        if stock["symbol"] == symbol:
-            if stock["total_shares"] < shares:
-                return apology("not enough shares")
-            else:
-                quote = lookup(symbol)
-                if quote is None:
-                    return apology("symbol not found")
-                price = quote["price"]
-                total_sale = shares * price
+        for stock in stocks:
+            if stock["symbol"] == symbol:
+                if stock["total_shares"] < shares:
+                    return apology("not enough shares")
+                else:
+                    quote = lookup(symbol)
+                    if quote is None:
+                        return apology("symbol not found")
+                    price = quote["price"]
+                    total_sale = shares * price
 
-                db.execute("UPDATE users SET cash = cash + :total_sale WHERE id = user_id", total_sale=total_sale, user_id=session["user_id"])
-                db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (:user_id, :symbol, :shares, :price)",
-                           user_id=session["user_id"], symbol=symbol, shares=shares, price=price)
+                    db.execute("UPDATE users SET cash = cash + :total_sale WHERE id = user_id", total_sale=total_sale, user_id=session["user_id"])
+                    db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (:user_id, :symbol, :shares, :price)",
+                            user_id=session["user_id"], symbol=symbol, shares=shares, price=price)
 
-                flash(f"Sold {shares} shares of {symbol} for {usd(total_sale)}")
-                return redirect("/")
-    return apology("symbol not found")
+                    flash(f"Sold {shares} shares of {symbol} for {usd(total_sale)}")
+                    return redirect("/")
+        return apology("symbol not found")
+    else:
+        return render_template("sell.html", stocks=stocks)
