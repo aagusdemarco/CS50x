@@ -47,6 +47,8 @@ def index():
         stock["value"] = quote["price"] * stock["total_shares"]
         total_value += stock["value"]
 
+        
+
     cash = usd(cash)
     total_value = usd(total_value)
     return render_template("index.html", stocks=stocks, cash=cash, total_value=total_value)
