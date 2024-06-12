@@ -47,7 +47,7 @@ def buy():
         shares = request.form.get("shares")
         if not symbol:
             return apology("must provide symbol")
-        elif not shares or no shares.isdigit() or int(shares) <= 0:
+        elif not shares or not shares.isdigit() or int(shares) <= 0:
             return apology("must provide a positive integer number of shares")
 
         quote = lookup(symbol)
@@ -66,7 +66,7 @@ def buy():
                    user_id=session["user_id"], symbol=symbol, shares=shares, price=price)
         flash(f"Bought {shares} shares of {symbol} for {usd(total_cost)}")
         return redirect("/")
-    
+
     else:
         return render_template("buy.html")
 
