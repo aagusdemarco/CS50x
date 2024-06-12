@@ -238,3 +238,9 @@ def sell():
         return apology("symbol not found")
     else:
         return render_template("sell.html", stocks=stocks)
+
+# Personal Addition: Deposit Functionality
+@app.route("/deposit", methods=["GET", "POST"])
+@login_required
+def deposit():
+    
