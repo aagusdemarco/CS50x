@@ -46,8 +46,6 @@ def index():
         stock["price"] = quote["price"]
         stock["value"] = quote["price"] * stock["total_shares"]
         total_value += stock["value"]
-        
-
 
     cash = usd(cash)
     total_value = usd(total_value)
