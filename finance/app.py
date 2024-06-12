@@ -243,4 +243,21 @@ def sell():
 @app.route("/deposit", methods=["GET", "POST"])
 @login_required
 def deposit():
-    return apology("TODO")
+    """Deposit money into the account"""
+    if request.method == "POST":
+        amount = request.form.get("amount")
+
+        if not amount or float(amount) <= 0:
+            return apology("must provide a positive amount")
+
+        amount = float(amount)
+
+        # Update the user's cash balance
+        db.execute("UPDATE users SET cash = cash + :amount WHERE id = :user_id",
+                   amount=amount, user_id=session["user_id"])
+
+        flash(f"Successfully deposited {usd(amount)}")
+        return redirect("/")
+
+    else:
+        return render_template("deposit.html")
