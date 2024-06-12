@@ -49,6 +49,8 @@ def index():
         total_value += stock["value"]
         grand_total += stock["value"]
 
+        stock["price"] = usd(stock["price"])
+        stock["value"] = usd(stock["value"])
     cash = usd(cash)
     total_value = usd(total_value)
     return render_template("index.html", stocks=stocks, cash=cash, total_value=total_value, grand_total=grand_total)
