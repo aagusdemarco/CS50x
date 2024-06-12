@@ -243,4 +243,4 @@ def sell():
 @app.route("/deposit", methods=["GET", "POST"])
 @login_required
 def deposit():
-    
+    return apology("TODO")
