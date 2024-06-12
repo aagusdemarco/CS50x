@@ -36,8 +36,9 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     stocks = db.execute("SELECT symbol, SUM(shares) as total_shares FROM transactions WHERE user_id = :user_id GROUP BY symbol HAVING total_shares >0",
-                         user_id=session["user_id"])
-    cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
+                        user_id=session["user_id"])
+    cash = db.execute("SELECT cash FROM users WHERE id = :user_id",
+                      user_id=session["user_id"])[0]["cash"]
 
     total_value = cash
 
@@ -50,7 +51,6 @@ def index():
     cash = usd(cash)
     total_value = usd(total_value)
     return render_template("index.html", stocks=stocks, cash=cash, total_value=total_value)
-
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -71,12 +71,14 @@ def buy():
 
         price = quote["price"]
         total_cost = int(shares) * price
-        cash = db.execute("SELECT cash FROM users WHERE id = :user_id", user_id=session["user_id"])[0]["cash"]
+        cash = db.execute("SELECT cash FROM users WHERE id = :user_id",
+                          user_id=session["user_id"])[0]["cash"]
 
         if cash < total_cost:
             return apology("not enough cash")
 
-        db.execute("UPDATE users SET cash = cash - :total_cost WHERE id = :user_id", total_cost=total_cost, user_id=session["user_id"])
+        db.execute("UPDATE users SET cash = cash - :total_cost WHERE id = :user_id",
+                   total_cost=total_cost, user_id=session["user_id"])
         db.execute("INSERT INTO transactions (user_id, symbol, shares,price) VALUES (:user_id, :symbol, :shares, :price)",
                    user_id=session["user_id"], symbol=symbol, shares=shares, price=price)
         flash(f"Bought {shares} shares of {symbol} for {usd(total_cost)}")
@@ -90,7 +92,8 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    transactions = db.execute("SELECT * FROM transactions WHERE user_id = :user_id ORDER BY timestamp DESC", user_id=session["user_id"])
+    transactions = db.execute(
+        "SELECT * FROM transactions WHERE user_id = :user_id ORDER BY timestamp DESC", user_id=session["user_id"])
     return render_template("history.html", transactions=transactions)
 
 
@@ -229,9 +232,10 @@ def sell():
                     price = quote["price"]
                     total_sale = shares * price
 
-                    db.execute("UPDATE users SET cash = cash + :total_sale WHERE id = :user_id", total_sale=total_sale, user_id=session["user_id"])
+                    db.execute("UPDATE users SET cash = cash + :total_sale WHERE id = :user_id",
+                               total_sale=total_sale, user_id=session["user_id"])
                     db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (:user_id, :symbol, :shares, :price)",
-                            user_id=session["user_id"], symbol=symbol, shares=-shares, price=price)
+                               user_id=session["user_id"], symbol=symbol, shares=-shares, price=price)
 
                     flash(f"Sold {shares} shares of {symbol} for {usd(total_sale)}")
                     return redirect("/")
@@ -240,6 +244,8 @@ def sell():
         return render_template("sell.html", stocks=stocks)
 
 # Personal Addition: Deposit Functionality
+
+
 @app.route("/deposit", methods=["GET", "POST"])
 @login_required
 def deposit():
