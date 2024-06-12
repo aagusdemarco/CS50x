@@ -129,7 +129,7 @@ def register():
             return apology("must provide confirmation", 400)
 
         elif request.form.get("password") != request.form.get("confirmation"):
-            return apology("passwords don't match", 400)
+            return apology("passwords do not match", 400)
 
         # Check if username already exists
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
